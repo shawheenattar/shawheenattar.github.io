@@ -6,9 +6,10 @@
     Author: shawheen attar
     Author URL: http://shawheenattar.github.io
 */
+/*
 
 @font-face {
-    font-family: Prime;
+    font-family:;
     font-style: normal;
     font-weight: 300;
     src: url(../fonts/Prime/PrimeLight.otf)
@@ -20,11 +21,12 @@
     font-weight: 500;
     src: url(../fonts/Prime/PrimeRegular.otf)
 }
+*/
 
 body {
     background-color: #202020;
     color: #A5AFB8;
-    font-family: Prime;
+    font-family: "Verdana", sans-serif;
     font-size: 20px;
 }
 
