@@ -67,9 +67,7 @@ a {
 
 .author-info {
     float:left;
-    width: 60%;
-    height: 360px;
-    overflow: hidden;
+    overflow: wrap;
     vertical-align: middle;
 }
 
@@ -77,7 +75,6 @@ a {
     font-size: 200%;
     margin-bottom: 4%;
     padding: 0 1%;
-    white-space: nowrap;
     padding-top: 2%;
 }
 
@@ -85,7 +82,6 @@ a {
     font-weight: 300;
     margin: 0 auto;
     padding: 0 1%;
-    white-space: nowrap;
 }
 
 .author-info p {
@@ -101,32 +97,25 @@ a {
 }
 
 .buttons {
-    margin-left: 1%;
+    margin: 0;
+    padding: 0;
+    overflow: wrap;
 }
 
 .buttons div a {
     font-weight: 300;
 }
 
-.button-resume {
+.button-link {
     float: left;
-    width: 20%;
+    margin: 10px;
+    margin-right: 20px;
+    margin-left: 5px;
+
 }
 
-.button-resume a {
-    padding: 5% 5%;
-    color: #A5AfB8;
-    border-bottom: 1px solid #A5AFB8;
-}
-
-.button-email {
-    float: left;
-    width: 20%;
-    margin-right: 60%;
-}
-
-.button-email a {
-    padding: 5% 5%;
+.button-link a {
+    padding: 5px 5px;
     color: #A5AfB8;
     border-bottom: 1px solid #A5AFB8;
 }
@@ -182,7 +171,7 @@ a {
     clear: both;
 }
 
-@media only screen and (min-width: 150px) and (max-width: 600px)
+@media only screen and (min-width: 150px) and (max-width: 680px)
 {
     .mainPage {
         width: 100%;
@@ -217,13 +206,10 @@ a {
         display: inherit;
         clear: inherit;
     }
-    .button-resume {
-        width: 30%;
+    .button-link {
+        margin-right: 50%;
     }
-    .button-email {
-        width: 30%;
-        margin-right: 40%;
-    }
+
 }
 
 
