@@ -1,84 +1,102 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    
+
 <head>
-    <title>shawheen attar</title>
+    <title>shawheen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="the website of the one and only shawheen attar">
-	<meta name="keywords" content="">
-	<meta name="author" content="shawheen attar">
+    <meta name="description" content="the website of the one and only shawheen attar">
+    <meta name="keywords" content="">
+    <meta name="author" content="shawheen attar">
     <meta charset="utf-8">
-    
+
     <!-- icons for browsers -->
-<!--    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">-->
-<!--    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">-->
-<!--    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">-->
-<!--    <link rel="manifest" href="favicon/site.webmanifest">-->
-<!--    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">-->
-<!--    <meta name="msapplication-TileColor" content="#2b5797">-->
-<!--    <meta name="theme-color" content="#ffffff">-->
-        
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">-->
+    <!--    <link rel="manifest" href="favicon/site.webmanifest">-->
+    <!--    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">-->
+    <!--    <meta name="msapplication-TileColor" content="#2b5797">-->
+    <!--    <meta name="theme-color" content="#ffffff">-->
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d23b3f7755.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+    <link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/spinkit.css" type="text/css" />
+    <script src="js/main.js"></script>
 </head>
 
-<body class="body">
-    
-    <div class="mainPage">
-        <section class="home">
-            <div class="author-info">
-                <h1>shawheen attar</h1>
-                <h2>> electrical and computer engineering major</h2>
-                <h2>> entrepreneurship minor</h2>
-                <p>goal-oriented, passion-driven, and dedicated student looking to chase interests in machine learning, app development, and graphic design to further the state of technology in the world.</p>
-                <div class="buttons">
-                    <div class="button-link">
-                        <a href="files/resume.pdf" class="btn-hvr" target="_blank">resume ></a>
-                    </div>
-                    <div class="button-link">
-                        <a href="https://www.github.com/shawheenattar" class="btn-hvr" target="_blank">github ></a>
-                    </div>
-                    <div class="button-link">
-                        <a href="https://www.linkedin.com/in/shawheen-attar" class="btn-hvr" target="_blank">linkedin ></a>
-                    </div>
+<body>
+    <div id="spinner-container">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="social">
+        <a href="https://www.facebook.com/shawheenattar" target="_blank"><i class="fab fa-facebook">
+                <p>facebook</p>
+            </i></a>
+        <a href="https://www.linkedin.com/in/shawheen-attar" target="_blank"><i class="fab fa-linkedin">
+                <p>linkedin</p>
+            </i></a>
+        <a href="https://github.com/shawheenattar" target="_blank"><i class="fab fa-github">
+                <p>github</p>
+            </i></a>
+        <a href="files/resume.pdf" target="_blank"><i class="far fa-file">
+                <p>resume</p>
+            </i></a>
+    </div>
+
+    <div class="main">
+
+        <section id="home">
+            <div class="page-name blah">
+                <h1 class="page-name-title">home</h1>
+            </div>
+            <div class="page-info">
+                <div class="info-left">
+                    <h1 id="hello"></h1>
+                    <h1 id="welcome"></h1>
+                </div>
+                <!-- <div class="info-right">
+                    <img class="main-photo" src="images/shawheen.jpeg">
+                </div> -->
+            </div>
+            <div id="scroll-indicator" onclick="scrollIndicatorClick()">
+                <p><span></span><span></span><span></span></p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="page-name">
+                <h1 class="page-name-title">projects</h1>
+            </div>
+
+            <div class="page-info">
+                <div class="info-left">
+                    <h1>Projects coming soon...</h1>
                 </div>
             </div>
         </section>
-        
-        <section class="skills">
+
+        <section id="experiences">
+            <div class="page-name">
+                <h1 class="page-name-title">experiences</h1>
+            </div>
+            <div class="page-info">
+                <div class="info-left">
+                	<h1>Experiences coming soon...</h1>
+                </div>
+            </div>
         </section>
-        
-        <section class="experiences">
-        </section>
-        
-        <section class="projects">
-        </section>
-        
-        <section class="interests">
-        </section>
-    
     </div>
-    
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

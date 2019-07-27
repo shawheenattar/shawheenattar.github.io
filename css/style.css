@@ -6,45 +6,515 @@
     Author: shawheen attar
     Author URL: http://shawheenattar.github.io
 */
-/*
 
-@font-face {
-    font-family:;
-    font-style: normal;
-    font-weight: 300;
-    src: url(../fonts/Prime/PrimeLight.otf)
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-@font-face {
-    font-family: Prime;
-    font-style: normal;
-    font-weight: 500;
-    src: url(../fonts/Prime/PrimeRegular.otf)
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
-*/
+
+:focus {
+    outline: none;
+}
 
 body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body,
+html {
+    /** grey background: #202020 **/
+    /** grey text: #A5AFB8 **/
     background-color: #202020;
-    color: #A5AFB8;
-    font-family: "Verdana", sans-serif;
+    color: white;
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
+    font-weight: lighter;
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: bolder;
 }
 
 a {
     text-decoration: none;
 }
 
-.body{
-    margin: 0 auto;
-    clear: both;
-    overflow: hidden;
+::selection,
+::selection {
+    background: deepskyblue;
 }
 
+/*----------------------*/
+/*-- Spinner Container -*/
+/*----------------------*/
+#spinner-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    background: #202020;
+}
+
+#spinner-container.hidden {
+    transition: 1s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*----------------------*/
+/*--- Navigation Menu --*/
+/*----------------------*/
+.onepage-pagination {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+.onepage-pagination li {
+    padding: 0;
+    text-align: center;
+}
+
+.onepage-pagination li a {
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.onepage-pagination li a:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    margin-top: 0;
+    left: 0;
+}
+
+.onepage-pagination li a:hover:before,
+.onepage-pagination li a:focus:before {
+    transition: .3s;
+    background: deepskyblue;
+    opacity: 1;
+    visibility: visible;
+}
+
+.onepage-pagination li a p{
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    transform: translate(0, -30%);
+    z-index: 20;
+}
+.onepage-pagination li a:hover > p {
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+    color: deepskyblue;
+    background-color: grey;
+    transform: translate(-100px, -30%);
+}
+
+.onepage-pagination li a.active:before {
+    width: 10px;
+    height: 10px;
+    background: deepskyblue;
+    border: none;
+    margin-top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+/*----------------------*/
+/*-Social Media Buttons-*/
+/*----------------------*/
+.social {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+.social a:focus>.fab,
+.social a:focus>.fas {
+    opacity: 0.7;
+    transition: 0.2s;
+    color: deepskyblue;
+}
+
+.fab,
+.far {
+    margin: 10px;
+    padding: 15px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s;
+    color: white;
+}
+
+.social p {
+    display: inline-block;
+    margin-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.social a:hover>.fab,
+.social a:hover>.far,
+.social a:hover>i>p {
+    transition: .7s;
+    opacity: 1;
+    color: deepskyblue;
+}
+
+.social a:hover>i>p {
+    visibility: visible;
+    transform-origin: bottom right;
+    transform: translate(-100%) rotate(-90deg) translate(30px, 90%);
+}
+
+/*----------------------*/
+/*------ Home Page -----*/
+/*----------------------*/
+#home {
+    background: #202020;
+    z-index: 0;
+}
+
+.page-name {
+    width: 10%;
+}
+
+.page-name h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font: inherit;
+    color: deepskyblue;
+    vertical-align: baseline;
+
+    transform-origin: top right;
+    transform: translate(0, -250%) rotate(-90deg);
+}
+
+.page-info {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: center;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -12.5%);
+}
+
+.info-left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+#hello {
+    width: 100%;
+    position: absolute;
+    top: 36%;
+    white-space: pre;
+}
+
+#welcome {
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    white-space: pre;
+}
+
+.info-left h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    white-space: pre;
+}
+
+.info-right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.main-photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SCROLL INDICATOR ARROWS */
+#scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px 50px 30px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#scroll-indicator.active {
+    transition: 2s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#scroll-indicator span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate-scroll-indicator 2s infinite;
+}
+
+#scroll-indicator:hover>p>span {
+    border-bottom-color: deepskyblue;
+    border-right-color: deepskyblue;
+}
+
+#scroll-indicator span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+#scroll-indicator span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate-scroll-indicator {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+
+
+/*----------------------*/
+/*---- Projects Page ---*/
+/*----------------------*/
+#projects {
+    position: relative;
+    height: 100%;
+    background: grey;
+}
+
+/*----------------------*/
+/*-- Experiences Page --*/
+/*----------------------*/
+#experiences {
+    position: relative;
+    height: 100%;
+    background: #202020;
+}
+
+/*
 .mainPage {
     margin: 0 auto;
-    width: 60%;  
+    width: 100%;  
     clear: both;
     overflow: hidden;
+    transition: 0.75s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mainPage.visible {
+    opacity: 1;
+    transition: 0.5s;
+    visibility: visible;
 }
 
 .home {
@@ -116,8 +586,8 @@ a {
 
 .button-link a {
     padding: 5px 5px;
-    color: #A5AfB8;
-    border-bottom: 1px solid #A5AFB8;
+    color: white;
+    border-bottom: 1px solid white;
 }
 
 .btn-hvr {
@@ -132,7 +602,7 @@ a {
 }
 
 .btn-hvr:before {
-    background-color: #A5AFB8;
+    background-color: white;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -156,7 +626,7 @@ a {
 }
 
 .btn-hvr:active,.btn-hvr:focus,.btn-hvr:hover {
-    color: #202020;
+    color: deepskyblue;
     border-bottom: 0;
 }
 
@@ -189,7 +659,7 @@ a {
         border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
-        background-color: #A5AfB8;
+        background-color: white;
     }
     .author-info {
         width: 100%;
@@ -215,32 +685,4 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
