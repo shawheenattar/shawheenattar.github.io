@@ -40,33 +40,19 @@ $(document).ready(function () {
         cursorChar: '|'
     });
 
-    var nav = document.getElementsByClassName("onepage-pagination");
-    var listItems = nav[0].getElementsByTagName('a');
-    for (i = 0; i < listItems.length; i++) {
-        var element = listItems[i];
-        console.log(element);
-        var elementID = element.id;
-        console.log(elementID);
-        pageName = elementID.substring(0, elementID.length - 4);
-        console.log(pageName)
-        $('<p id="newElement">' + pageName + '</p>').prependTo(element);
-       
-
-        // element.onmouseover = function(){
-        // };
-        // element.onmouseout = function(){
-        //     console.log('stopped hovering');
-        //     $('#newElement').remove();
-        // };
+    // var nav = document.getElementsByClassName("onepage-pagination");
+    // var listItems = nav[0].getElementsByTagName('a');
+    // for (i = 0; i < listItems.length; i++) {
+    //     var element = listItems[i];
+    //     console.log(element);
+    //     var elementID = element.id;
+    //     console.log(elementID);
+    //     pageName = elementID.substring(0, elementID.length - 4);
+    //     console.log(pageName)
+    //     $('<p id="newElement">' + pageName + '</p>').prependTo(element);
     }
 })
 
 function scrollIndicatorClick() {
     $(".main").moveDown();
-}
-
-function showMenuTitles() {
-    var x = el.getBoundingClientRect();
-    console.log(x.top);
-    el.style.backgroundColor = 'red';
 }
