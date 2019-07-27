@@ -328,6 +328,7 @@ a {
 
 .page-name {
     width: 10%;
+    height: 100%;
 }
 
 .page-name h1 {
@@ -343,8 +344,8 @@ a {
     color: deepskyblue;
     vertical-align: baseline;
 
-    transform-origin: top right;
-    transform: translate(0, -250%) rotate(-90deg);
+    transform-origin: top left;
+    transform: rotate(-90deg) translate(-50%, 70px) ;
 }
 
 .page-info {
@@ -375,20 +376,6 @@ a {
     text-align: center;
 }
 
-#hello {
-    width: 100%;
-    position: absolute;
-    top: 36%;
-    white-space: pre;
-}
-
-#welcome {
-    width: 100%;
-    position: absolute;
-    top: 52%;
-    white-space: pre;
-}
-
 .info-left h1 {
     width: 100%;
     position: absolute;
@@ -397,6 +384,14 @@ a {
     transform: translate(-50%, -50%);
     vertical-align: middle;
     white-space: pre;
+}
+
+#hello {
+    transform: translate(-50%, -115%);
+}
+
+#welcome {
+    transform: translate(-50%, 15%);
 }
 
 .info-right {
@@ -498,6 +493,27 @@ a {
     position: relative;
     height: 100%;
     background: #202020;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 1000px)
+{
+    h1 {
+        font-size: 40px;
+        overflow: wrap;
+    }
+
+    .page-name h1 {
+        transform: rotate(-90deg) translate(-50%, 20px) ;
+    }
+
+    .onepage-pagination {
+        right: 20px;
+    }
+
+    .social {
+        left: 50%;
+        transform: translate(-55%, 0);
+    }
 }
 
 /*
