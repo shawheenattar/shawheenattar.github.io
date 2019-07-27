@@ -50,7 +50,7 @@ $(document).ready(function () {
     //     pageName = elementID.substring(0, elementID.length - 4);
     //     console.log(pageName)
     //     $('<p id="newElement">' + pageName + '</p>').prependTo(element);
-    }
+    // }
 })
 
 function scrollIndicatorClick() {
