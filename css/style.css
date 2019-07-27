@@ -516,6 +516,11 @@ a {
         height: 7px;
     }
 
+    .onepage-pagination li a.active:before {
+        width: 7px;
+        height: 7px;
+    }
+
     .social {
         left: 50%;
         transform: translate(-55%, 0);
