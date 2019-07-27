@@ -17,25 +17,27 @@ $(document).ready(function () {
         direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
     });
 
+    $(".main").moveTo(1); //loads site to top on each page reload
+
     setTimeout(function () {
         document.getElementById('spinner-container').classList += " hidden";
-    }, 1000);
+    }, 1500);
 
     setTimeout(function () {
         document.getElementById('scroll-indicator').classList += " active";
-    }, 8000);
+    }, 8500);
 
     var typed = new Typed("#hello", {
         strings: ['hi, i\'m <font color="deepskyblue">shawheen</font>'],
         typeSpeed: 90,
-        startDelay: 2000,
+        startDelay: 2500,
         showCursor: false,
         cursorChar: '|'
     });
     var typed2 = new Typed("#welcome", {
         strings: ['welcome to my site'],
         typeSpeed: 90,
-        startDelay: 5000,
+        startDelay: 5500,
         showCursor: false,
         cursorChar: '|'
     });
