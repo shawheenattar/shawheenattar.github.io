@@ -498,22 +498,60 @@ a {
 @media only screen and (min-width: 150px) and (max-width: 1000px)
 {
     h1 {
-        font-size: 40px;
+        font-size: 25px;
         overflow: wrap;
     }
 
     .page-name h1 {
         transform: rotate(-90deg) translate(-50%, 20px) ;
+        font-size: 15px;
     }
 
     .onepage-pagination {
-        right: 20px;
+        right: 7px;
+    }
+
+    .onepage-pagination li a:before {
+        width: 7px;
+        height: 7px;
     }
 
     .social {
         left: 50%;
         transform: translate(-55%, 0);
     }
+
+    .fab,
+    .far {
+        margin: 5px;
+        padding: 10px;
+    }
+    
+    .social a:hover>.fab,
+    .social a:hover>.far,
+    .social a:hover>i>p {
+        transition: .7s;
+        opacity: 1;
+        color: deepskyblue;
+    }
+    
+    .social a:hover>i>p {
+        visibility: hidden;
+        opacity: 0;
+        transform-origin: bottom right;
+        transform: translate(-100%) rotate(-90deg) translate(30px, 90%);
+    }
+
+    #hello {
+        transform: translate(-50%, -100%);
+    }
+    
+    #welcome {
+        transform: translate(-50%, 0%);
+    }
+
+    #scroll-indicator {
+        bottom: 20px;
 }
 
 /*
