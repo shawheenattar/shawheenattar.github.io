@@ -271,7 +271,7 @@
     height: 50px;
   
     position: absolute;
-    top: calc(50vh - 25px);
+    top: calc(50vh - 50px);
     left: calc(50vw - 25px);
   }
   
