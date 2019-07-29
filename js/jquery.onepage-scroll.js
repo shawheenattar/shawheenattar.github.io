@@ -295,11 +295,9 @@
       $(this).css({
         position: "absolute",
         left: (settings.direction == 'horizontal') ?
-          leftPos + "%" :
-          0,
+          leftPos + "%" : 0,
         top: (settings.direction == 'vertical' || settings.direction != 'horizontal') ?
-          topPos + "%" :
-          0
+          topPos + "%" : 0
       });
 
       if (settings.direction == 'horizontal')
@@ -307,6 +305,7 @@
       else
         topPos = topPos + 100;
 
+      //CODE THAT I ADDED
       var sections = document.querySelectorAll(".page-name-title");
       var currentSection = sections[i].textContent;
 

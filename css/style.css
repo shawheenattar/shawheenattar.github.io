@@ -6,7 +6,6 @@
     Author: shawheen attar
     Author URL: http://shawheenattar.github.io
 */
-
 html,
 body,
 div,
@@ -206,14 +205,14 @@ a {
 .onepage-pagination li {
     padding: 0;
     text-align: center;
+    margin: 15px 0;
+    padding: 10px;
 }
 
 .onepage-pagination li a {
-    padding: 10px;
     width: 10px;
     height: 10px;
     display: block;
-    margin-bottom: 30px;
     text-decoration: none;
 }
 
@@ -238,20 +237,18 @@ a {
     visibility: visible;
 }
 
-.onepage-pagination li a p{
+.onepage-pagination li p{
     opacity: 0;
     visibility: hidden;
     color: white;
     transform: translate(0, -30%);
-    z-index: 20;
 }
-.onepage-pagination li a:hover > p {
+.onepage-pagination li p.active {
     opacity: 1;
     visibility: visible;
     transition: .5s;
     color: deepskyblue;
     background-color: grey;
-    transform: translate(-100px, -30%);
 }
 
 .onepage-pagination li a.active:before {
@@ -275,7 +272,7 @@ a {
 }
 
 .social a:focus>.fab,
-.social a:focus>.fas {
+.social a:focus>.far {
     opacity: 0.7;
     transition: 0.2s;
     color: deepskyblue;
@@ -345,7 +342,7 @@ a {
     vertical-align: baseline;
 
     transform-origin: top left;
-    transform: rotate(-90deg) translate(-50%, 70px) ;
+    transform: rotate(-90deg) translate(-50%, 80px) ;
 }
 
 .page-info {
@@ -486,6 +483,16 @@ a {
     background: grey;
 }
 
+#projects h1 {
+    opacity: 0;
+    transition: 2s;
+}
+
+#projects.active h1 {
+    opacity: 1;
+    transition: 4s;
+}
+
 /*----------------------*/
 /*-- Experiences Page --*/
 /*----------------------*/
@@ -500,6 +507,10 @@ a {
     h1 {
         font-size: 25px;
         overflow: wrap;
+    }
+
+    :hover {
+        visibility: hidden;
     }
 
     .page-name h1 {

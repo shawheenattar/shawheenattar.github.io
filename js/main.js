@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    document.getElementById('spinner-container').classList -= " hidden";
+    document.getElementById('scroll-indicator').classList -= " active";
+
     $(".main").onepage_scroll({
         sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
         easing: "ease-in-out", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -42,18 +45,41 @@ $(document).ready(function () {
         cursorChar: '|'
     });
 
-    // var nav = document.getElementsByClassName("onepage-pagination");
-    // var listItems = nav[0].getElementsByTagName('a');
-    // for (i = 0; i < listItems.length; i++) {
-    //     var element = listItems[i];
-    //     console.log(element);
-    //     var elementID = element.id;
-    //     console.log(elementID);
-    //     pageName = elementID.substring(0, elementID.length - 4);
-    //     console.log(pageName)
-    //     $('<p id="newElement">' + pageName + '</p>').prependTo(element);
-    // }
+    var nav = document.getElementsByClassName("onepage-pagination");
+    var listItems = nav[0].getElementsByTagName('a');
+    for (i = 0; i < listItems.length; i++) {
+        var element = listItems[i];
+        var elementID = element.id;
+        pageName = elementID.substring(0, elementID.length - 4);
+        var newID = 'menu-title-' + pageName;
+        $(element).append('<p id="' + newID + '">' + pageName + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>');
+        $(element).hover(toggleMenuItem, toggleMenuItem);
+        width = element.scrollWidth + 10;
+        console.log(width);
+        $("<style>")
+            .prop("type", "text/css")
+            .html("\
+            #" + newID + ".active {\
+                transform: translate(-" + width + "px, -30%);\
+            }")
+            .appendTo("head");
+        $("<style>")
+            .prop("type", "text/css")
+            .html("\
+            #" + newID + " {\
+                transform: translate(-40px, -30%);\
+            }")
+            .appendTo("head");
+    }
+
 })
+
+function toggleMenuItem() {
+    var elem = $(this).find('p')[0];
+    $(elem).toggleClass('active');
+    console.log(elem);
+    console.log(elem.scrollWidth);
+}
 
 function scrollIndicatorClick() {
     $(".main").moveDown();
