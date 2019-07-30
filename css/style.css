@@ -476,9 +476,9 @@ a {
 /*---- Projects Page ---*/
 /*----------------------*/
 #projects {
-    position: relative;
-    height: 100%;
-    background: grey;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../images/projects.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 #projects h1 {
@@ -495,11 +495,30 @@ a {
 /*-- Experiences Page --*/
 /*----------------------*/
 #experiences {
-    position: relative;
-    height: 100%;
     background: #202020;
 }
 
+/*----------------------*/
+/*--- Interests Page ---*/
+/*----------------------*/
+#interests {
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../images/rowing-sunrise-1.jpg");
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+/*----------------------*/
+/*--- Education Page ---*/
+/*----------------------*/
+#education {
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../images/ut-wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*----------------------*/
+/*---- Mobile Stuff ----*/
+/*----------------------*/
 @media only screen and (min-width: 150px) and (max-width: 1000px)
 {
     h1 {
