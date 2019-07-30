@@ -243,12 +243,12 @@ a {
     color: white;
     transform: translate(0, -30%);
 }
+
 .onepage-pagination li p.active {
     opacity: 1;
     visibility: visible;
     transition: .5s;
     color: deepskyblue;
-    background-color: grey;
 }
 
 .onepage-pagination li a.active:before {
@@ -526,17 +526,13 @@ a {
         overflow: wrap;
     }
 
-    :hover {
-        visibility: hidden;
-    }
-
     .page-name h1 {
         transform: rotate(-90deg) translate(-50%, 20px) ;
         font-size: 15px;
     }
 
     .onepage-pagination {
-        right: 7px;
+        right: 3px;
     }
 
     .onepage-pagination li a:before {
@@ -547,6 +543,13 @@ a {
     .onepage-pagination li a.active:before {
         width: 7px;
         height: 7px;
+    }
+
+    .onepage-pagination li p.active {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0s;
+        color: deepskyblue;
     }
 
     .social {
