@@ -179,7 +179,7 @@ a {
     left: 0px;
     opacity: 1;
     visibility: visible;
-    z-index: 10000 ;
+    z-index: 10000;
     height: 100vh;
     width: 100vw;
     background: #202020;
@@ -196,9 +196,9 @@ a {
 /*----------------------*/
 .onepage-pagination {
     position: absolute;
-    right: 80px;
+    right: 70px;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     z-index: 10000;
 }
 
@@ -237,7 +237,7 @@ a {
     visibility: visible;
 }
 
-.onepage-pagination li p{
+.onepage-pagination li p {
     opacity: 0;
     visibility: hidden;
     color: white;
@@ -342,7 +342,7 @@ a {
     vertical-align: baseline;
 
     transform-origin: top left;
-    transform: rotate(-90deg) translate(-50%, 80px) ;
+    transform: rotate(-90deg) translate(-50%, 80px);
 }
 
 .page-info {
@@ -476,7 +476,7 @@ a {
 /*---- Projects Page ---*/
 /*----------------------*/
 #projects {
-    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../images/projects.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/projects.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -502,7 +502,7 @@ a {
 /*--- Interests Page ---*/
 /*----------------------*/
 #interests {
-    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../images/rowing-sunrise-1.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/rowing-sunrise-1.jpg");
     background-size: cover;
     background-position: 50% 30%;
 }
@@ -511,7 +511,7 @@ a {
 /*--- Education Page ---*/
 /*----------------------*/
 #education {
-    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url("../images/ut-wallpaper.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/ut-wallpaper.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -519,30 +519,29 @@ a {
 /*----------------------*/
 /*---- Mobile Stuff ----*/
 /*----------------------*/
-@media only screen and (min-width: 150px) and (max-width: 1000px)
-{
+@media only screen and (min-width: 150px) and (max-width: 1000px) {
     h1 {
         font-size: 25px;
         overflow: wrap;
     }
 
     .page-name h1 {
-        transform: rotate(-90deg) translate(-50%, 20px) ;
+        transform: rotate(-90deg) translate(-50%, 20px);
         font-size: 15px;
     }
 
     .onepage-pagination {
-        right: 3px;
+        right: 00px;
     }
 
     .onepage-pagination li a:before {
-        width: 7px;
-        height: 7px;
+        width: 8px;
+        height: 8px;
     }
 
     .onepage-pagination li a.active:before {
-        width: 7px;
-        height: 7px;
+        width: 8px;
+        height: 8px;
     }
 
     .onepage-pagination li p.active {
@@ -562,7 +561,7 @@ a {
         margin: 5px;
         padding: 10px;
     }
-    
+
     .social a:hover>.fab,
     .social a:hover>.far,
     .social a:hover>i>p {
@@ -570,7 +569,7 @@ a {
         opacity: 1;
         color: deepskyblue;
     }
-    
+
     .social a:hover>i>p {
         visibility: hidden;
         opacity: 0;
@@ -581,19 +580,25 @@ a {
     #hello {
         transform: translate(-50%, -100%);
     }
-    
+
     #welcome {
         transform: translate(-50%, 0%);
     }
 
     #scroll-indicator {
         bottom: 20px;
+    }
+
+    #education {
+        background-position: 75% 10%;
+    }
+
 }
 
-/*
+/* 
 .mainPage {
     margin: 0 auto;
-    width: 100%;  
+    width: 100%;
     clear: both;
     overflow: hidden;
     transition: 0.75s;
@@ -612,10 +617,10 @@ a {
 }
 
 .author-img {
-    float:left;
+    float: left;
     width: 40%;
     overflow: hidden;
-    text-align:center;
+    text-align: center;
 }
 
 .author-img img {
@@ -626,7 +631,7 @@ a {
 }
 
 .author-info {
-    float:left;
+    float: left;
     overflow: wrap;
     vertical-align: middle;
 }
@@ -681,14 +686,14 @@ a {
 }
 
 .btn-hvr {
-    -webkit-transform:perspective(1px) translateZ(0);
-    transform:perspective(1px) translateZ(0);
-    box-shadow:0 0 1px rgba(0,0,0,0);
-    position:relative;
-    -webkit-transition-property:color;
-    transition-property:color;
-    -webkit-transition-duration:.3s;
-    transition-duration:.3s
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s
 }
 
 .btn-hvr:before {
@@ -696,33 +701,37 @@ a {
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    content:"";
-    position:absolute;
-    z-index:-1;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    -webkit-transform:scaleY(0);
-    transform:scaleY(0);
-    -webkit-transform-origin:50%;
-    transform-origin:50%;
-    -webkit-transition-property:transform;
-    transition-property:transform;
-    -webkit-transition-duration:.3s;
-    transition-duration:.3s;
-    -webkit-transition-timing-function:ease-out;
-    transition-timing-function:ease-out
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out
 }
 
-.btn-hvr:active,.btn-hvr:focus,.btn-hvr:hover {
+.btn-hvr:active,
+.btn-hvr:focus,
+.btn-hvr:hover {
     color: deepskyblue;
     border-bottom: 0;
 }
 
-.btn-hvr:active:before,.btn-hvr:focus:before,.btn-hvr:hover:before {
-    -webkit-transform:scaleY(1);
-    transform:scaleY(1)
+.btn-hvr:active:before,
+.btn-hvr:focus:before,
+.btn-hvr:hover:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1)
 }
 
 .buttons:after {
@@ -731,19 +740,20 @@ a {
     clear: both;
 }
 
-@media only screen and (min-width: 150px) and (max-width: 680px)
-{
+@media only screen and (min-width: 150px) and (max-width: 680px) {
     .mainPage {
         width: 100%;
     }
+
     .home {
         margin: 2% 10%;
     }
+
     .author-img {
         width: 100%;
-        margin
     }
-    .author-img img{
+
+    .author-img img {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -751,28 +761,29 @@ a {
         -moz-border-radius: 50%;
         background-color: white;
     }
+
     .author-info {
         width: 100%;
     }
+
     .author-info h1 {
         padding-top: 0;
     }
+
     .author-info h2 {
         padding-top: 0;
         white-space: normal;
     }
+
     .home:after {
         content: "";
         display: inherit;
         clear: inherit;
     }
+
     .button-link {
         margin-right: 50%;
     }
 
-}
-
-
-
-
+} 
 */
